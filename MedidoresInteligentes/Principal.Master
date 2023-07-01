@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="MedidoresInteligentes.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title></title>
+    <style>
+        .custom-card {
+    background-color: #6C6EA0;
+}
+        .calendar {
+            width: auto;
+            font-size: 14px;
+            border: none;
+            background: transparent;
+        }
+
+        .header {
+            background-color: #FF1053;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .separator {
+            border-top: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .mapa-sitio {
+            text-align: left;
+        }
+
+        .breadcrumb {
+            background-color: #FF1053;
+            padding: 10px;
+            margin-bottom: 0;
+        }
+        .form-outline {
+            border: 1px solid #C1CAD6; 
+            border-radius: 10px; 
+            padding: 10px;
+        }
+
+
+        .breadcrumb .breadcrumb-item a {
+                color: #FF1053;
+                text-decoration: none;
+        }
+
+        .breadcrumb .breadcrumb-item.active {
+                color: #fff;
+                background-color: #FF1053;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <h1>Medidores Inteligentes</h1>
+            <hr class="separator" />
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="breadcrumb" PathSeparator=" &#x3e; ">
+                    <CurrentNodeStyle CssClass="breadcrumb-item active" />
+                    <NodeStyle CssClass="breadcrumb-item" />
+                </asp:SiteMapPath>
+        </header>
+        <div class="container-fluid mt-5">
+            <asp:ContentPlaceHolder ID="Contenido" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
